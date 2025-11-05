@@ -13,8 +13,8 @@ fn main() {
     let g = scores.get("green");
     println!("{:?} {:?}", r,g); 
 
-    let red: &mut i32 = scores.entry("blue".to_string()).or_insert(0);
-    *red += 100;
+    let blue: &mut i32 = scores.entry("blue".to_string()).or_insert(0);
+    *blue += 100;
     let black: &mut i32 = scores.entry("black".to_string()).or_insert(400);
 
     println!("{:#?}", scores);
