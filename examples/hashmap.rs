@@ -13,9 +13,9 @@ fn main() {
     let g = scores.get("green");
     println!("{:?} {:?}", r,g); 
 
-    let blue: &mut i32 = scores.entry("blue".to_string()).or_insert(0);
+    let blue: &mut i32 = scores.entry("blue".to_string()).or_insert(0); // this method returns a mutable reference
     *blue += 100;
-    let black: &mut i32 = scores.entry("black".to_string()).or_insert(400);
+    let black: &mut i32 = scores.entry("black".to_string()).or_insert(400); // if black not found then create with default value
 
     println!("{:#?}", scores);
 }
