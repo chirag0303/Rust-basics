@@ -1,7 +1,6 @@
 use std::collections::HashMap;
 
 fn main() {
-
     //hashmaps is like dictionary in python
     let mut scores: HashMap<String, i32> = HashMap::new();
     scores.insert(String::from("blue"), 100);
@@ -11,7 +10,7 @@ fn main() {
 
     let r = scores.get("red");
     let g = scores.get("green");
-    println!("{:?} {:?}", r,g); 
+    println!("{:?} {:?}", r, g);
 
     let blue: &mut i32 = scores.entry("blue".to_string()).or_insert(0); // this method returns a mutable reference
     *blue += 100;

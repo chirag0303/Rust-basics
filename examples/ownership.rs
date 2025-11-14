@@ -4,16 +4,16 @@ fn main() {
 
     //Ownership rule
     //1. Every value must have a owner
-    let s: String= String::from("Hello"); // owner is 's'
+    let s: String = String::from("Hello"); // owner is 's'
 
     //2. Only one owner at at time, prev owner get dropped
-    let s1= s;
-    println!("{s1}");  
+    let s1 = s;
+    println!("{s1}");
     //println!("{s}"); // This will give error beacause s is dropped
 
     //3. When owner goes out of scope, value gets dropped
 
-    let s= "hhello".to_string();
+    let s = "hhello".to_string();
     {
         s;
     } // scope ends
